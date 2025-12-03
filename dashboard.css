@@ -1,0 +1,235 @@
+:root {
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#ff3b30;
+  --muted:#94a3b8;
+  --glass: rgba(255,255,255,0.04);
+  --white:#fff;
+  --success:#22c55e;
+}
+
+body {
+  margin: 0;
+  background: #1e263b;
+  font-family: Inter, sans-serif;
+  color: var(--white);
+}
+
+/* FULL WEBSITE HEADER */
+.site-header {
+  width: 100%;
+  padding: 20px 40px;
+  background: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg,#ff7a6b,var(--accent));
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+header .app-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+header .app-sub {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  background: var(--glass);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* MAIN CONTENT LAYOUT */
+.content {
+  display: flex;
+  padding: 30px;
+  gap: 30px;
+}
+
+/* LEFT & RIGHT PANELS */
+.left-section {
+  width: 35%;
+}
+
+.right-section {
+  width: 65%;
+}
+
+/* BALANCE CARD — FIXED SIZE + CENTERED */
+.balance-card {
+  background: var(--glass);
+  border-radius: 16px;
+  padding: 20px;
+  
+  width: 100%;                 /* fits the left column */
+  display: flex;
+  justify-content: center;     /* centers the content */
+  align-items: center;
+  text-align: center;          /* centers text */
+  box-sizing: border-box;
+}
+
+.balance-left {
+  display: flex;
+  flex-direction: column;      /* stack vertically */
+  align-items: center;          /* center horizontally */
+  gap: 10px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ffd7d0, #ff8b80);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.bal-label {
+  color: var(--muted);
+}
+
+.bal-amount {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+
+/* QUICK GRID */
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.quick {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.quick:hover { background: rgba(255,255,255,0.1); }
+
+/* BIG + CENTERED QR BUTTON */
+.qr-quick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.qr-quick .qr-icon {
+  width: 260px;     /* Bigger QR */
+  height: 260px;    /* Bigger QR */
+  display: block;
+  margin: 0 auto 15px auto;  /* Center it */
+}
+
+.qr-quick label {
+  font-size: 22px;   /* Bigger text */
+  font-weight: 700;
+  text-align: center;
+  margin-top: 8px;
+}
+
+
+.quick label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* PROMOTIONS */
+.section {
+  margin-bottom: 30px;
+}
+
+.card-item {
+  background: var(--glass);
+  padding: 16px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.card-left {
+  display: flex;
+  gap: 12px;
+}
+
+.promo-img {
+  width: 70px;
+  height: 48px;
+  border-radius: 8px;
+  background: linear-gradient(90deg,#ffd7d0,#ff8b80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.promo-img.green {
+  background: linear-gradient(90deg,#e0fbe7,#c3f6d0);
+  color:#064e2a;
+}
+
+/* TRANSACTIONS */
+.tx {
+  background: var(--glass);
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tx .qr-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.amount {
+  margin-left: auto;
+  font-weight: 700;
+}
+
+/* QR ICON STYLES */
+.qr-box { stroke: currentColor; stroke-width: 1.4; }
+.qr-dot { fill: currentColor; }
