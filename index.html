@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login/Signup Form</title>
+    <title>PlastiCycle - Login & Registration</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -13,25 +13,41 @@
     <!-- LOGIN FORM -->
     <div class="form-box login">
         <form id="login-form">
-            <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" id="login-username" placeholder="Username" required>
-                <i class='bx bxs-user'></i>
+            <h1>Login to PlastiCycle</h1>
+            <p class="tagline">Recycle plastic, earn rewards!</p>
+            
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" id="login-username" placeholder="Username or Email" required>
+                    <i class='bx bxs-user'></i>
+                    <div class="error-text"></div>
+                </div>
+                
+                <div class="input-box password">
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt toggle-password' data-target="login-password"></i>
+                    <div class="error-text"></div>
+                </div>
             </div>
-            <div class="input-box">
-                <input type="password" id="login-password" placeholder="Password" required>
-                <i class='bx bxs-lock-alt'></i>
-            </div>
+            
             <div class="forgot-link">
-                <a href="#">Forgot Password?</a>
+                <a href="#" id="forgot-password">Forgot Password?</a>
             </div>
+            
             <button type="submit" class="btn">Login</button>
-            <p>or login with social platforms</p>
+            
+            <p class="demo-hint">Demo: Try "admin" with "admin123"</p>
+            
+            <div class="or-divider">or login with</div>
+            
             <div class="social-icons">
-                <a href="#"><i class='bx bxl-google'></i></a>
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-github'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" title="Google"><i class='bx bxl-google'></i></a>
+                <a href="#" title="Facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="#" title="GitHub"><i class='bx bxl-github'></i></a>
+            </div>
+            
+            <div class="register-link">
+                Don't have an account? <a href="#" class="register-link-btn">Register here</a>
             </div>
         </form>
     </div>
@@ -39,46 +55,95 @@
     <!-- REGISTER FORM -->
     <div class="form-box register">
         <form id="register-form">
-            <h1>Registration</h1>
-            <div class="input-box">
-                <input type="text" id="register-username" placeholder="Username" required>
-                <i class='bx bxs-user'></i>
+            <h1>Join PlastiCycle</h1>
+            <p class="tagline">Start recycling and earning rewards today!</p>
+            
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" id="register-username" placeholder="Choose username" required>
+                    <i class='bx bxs-user'></i>
+                    <div class="error-text"></div>
+                </div>
+                
+                <div class="input-box">
+                    <input type="email" id="register-email" placeholder="Email address" required>
+                    <i class='bx bxs-envelope'></i>
+                    <div class="error-text"></div>
+                </div>
+                
+                <div class="input-box password">
+                    <input type="password" id="register-password" placeholder="Create password" required>
+                    <i class='bx bxs-lock-alt toggle-password' data-target="register-password"></i>
+                    <div class="error-text"></div>
+                    <div class="password-strength"></div>
+                </div>
+                
+                <div class="input-box password">
+                    <input type="password" id="register-confirm" placeholder="Confirm password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                    <div class="error-text"></div>
+                </div>
             </div>
-            <div class="input-box">
-                <input type="email" id="register-email" placeholder="Email" required>
-                <i class='bx bxs-envelope'></i>
+            
+            <div class="terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">
+                    I agree to the <a href="#" target="_blank">Terms & Conditions</a> and 
+                    <a href="#" target="_blank">Privacy Policy</a>
+                </label>
             </div>
-            <div class="input-box">
-                <input type="password" id="register-password" placeholder="Password" required>
-                <i class='bx bxs-lock-alt'></i>
-            </div>
-            <button type="submit" class="btn">Register</button>
-            <p>or register with social platforms</p>
+            
+            <button type="submit" class="btn">Create Account</button>
+            
+            <div class="or-divider">or register with</div>
+            
             <div class="social-icons">
-                <a href="#"><i class='bx bxl-google'></i></a>
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-github'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" title="Google"><i class='bx bxl-google'></i></a>
+                <a href="#" title="Facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="#" title="GitHub"><i class='bx bxl-github'></i></a>
+            </div>
+            
+            <div class="register-link">
+                Already have an account? <a href="#" class="login-link-btn">Login here</a>
             </div>
         </form>
     </div>
 
     <!-- TOGGLE PANEL -->
     <div class="toggle-box">
+        <div class="logo">
+            <div class="logo-icon">♻️</div>
+            <h2>PlastiCycle</h2>
+        </div>
+        
         <div class="toggle-panel toggle-left">
-            <h1>Hello, Welcome!</h1>
-            <p>Don't have an account?</p>
-            <button class="btn register-btn">Register</button>
+            <h1>New Here?</h1>
+            <p>Join our recycling community and start earning rewards for your plastic waste!</p>
+            <button class="btn register-btn">Sign Up</button>
         </div>
 
         <div class="toggle-panel toggle-right">
             <h1>Welcome Back!</h1>
-            <p>Already have an account?</p>
-            <button class="btn login-btn">Login</button>
+            <p>Continue your recycling journey and check your rewards!</p>
+            <button class="btn login-btn">Sign In</button>
         </div>
     </div>
 </div>
 
-<script src="SignUp_LogIn_Form.js"></script>
+<!-- Forgot Password Modal -->
+<div class="modal" id="forgotModal" style="display: none;">
+    <div class="modal-content">
+        <h3>Reset Password</h3>
+        <p>Enter your email to receive a password reset link:</p>
+        <input type="email" id="reset-email" placeholder="Your email address" 
+               style="width: 100%; padding: 0.75rem; margin: 1rem 0; border: 2px solid var(--border); border-radius: 8px;">
+        <div class="modal-actions">
+            <button class="modal-btn cancel-btn" id="cancelReset">Cancel</button>
+            <button class="modal-btn confirm-btn" id="sendReset">Send Reset Link</button>
+        </div>
+    </div>
+</div>
+
+<script src="index.js"></script>
 </body>
 </html>
