@@ -16,6 +16,16 @@ document.addEventListener('DOMContentLoaded', function() {
         { code: "890234", points: 5, type: "general" },
         { code: "236418", points: 5, type: "general" },
         { code: "895382", points: 5, type: "general" },
+        { code: "135790", points: 1, type: "numeric" },
+        { code: "246801", points: 1, type: "numeric" },
+        { code: "774422", points: 1, type: "numeric" },
+        { code: "983451", points: 1, type: "numeric" },
+        { code: "627419", points: 1, type: "numeric" },
+        { code: "510936", points: 1, type: "numeric" },
+        { code: "302845", points: 1, type: "numeric" },
+        { code: "719204", points: 1, type: "numeric" },
+        { code: "864512", points: 1, type: "numeric" },
+        { code: "438920", points: 1, type: "numeric" },
         { code: "PLANET50", points: 50, type: "special" }
     ];
     
@@ -294,4 +304,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
 });
